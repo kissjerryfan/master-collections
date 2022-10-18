@@ -12,3 +12,10 @@ fc_vec[row[i], col[i]] = cb_val[i]
 ```
 
 ### setting an array element with a sequence
+这个问题的出现有个较为特殊的使用场景，如下面的例子所示：
+```
+matrix = np.zeros((n, 1))
+for i in range(n):
+    cb[i] = matrix[i]
+```
+上面的cb是一个一维数组，用于接收matrix的数据，在这时会出现上面的错误。这里是一种错误的理解，认为numpy的数组在size=n*1的情况下就是一个一维数组了，但实际上并不是这样的，解决方法很简单，matrix调用squeeze函数进行压缩即可
