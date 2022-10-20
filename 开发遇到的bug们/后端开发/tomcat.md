@@ -7,4 +7,4 @@ http://localhost:8080/services
 ```
 http://localhost:8080/axisTest_war_exploded/services
 ```
-产生此问题的原因是什么仍未可知
+原因是在配置Tomcat时，点击fix添加工件之后要修改它的Application Context为单斜杠，来避免它自动添加上工件所在位置的映射
